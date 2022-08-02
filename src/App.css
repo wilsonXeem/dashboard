@@ -1,0 +1,143 @@
+.App {
+  display: flex;
+}
+
+.content {
+  width: 100vw;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#tradingview_widget_wrapper div:nth-child(even) {
+  display: none;
+}
+
+.mkt {
+  margin-bottom: 2rem;
+  box-shadow: 0.5px 0.5px 5px 0.5px;
+}
+
+.fcr {
+  box-shadow: 0.5px 0.5px 5px 0.5px;
+  margin-bottom: 2rem
+}
+
+.dash {
+  /* padding: 2px 1rem; */
+  background-color: rgb(232, 251, 251);
+}
+
+.dash div {
+  background-color: white;
+}
+
+.dash h4 {
+  padding: 5px 1rem;
+  border-bottom: solid blue 2px;
+}
+
+/* .ec{
+  padding: 2px 1rem;
+  box-shadow: 0.5px 0.5px 5px 0.5px;
+} */
+
+/* .ta{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+} */
+
+.profile {
+  height: 100vh;
+}
+
+.img {
+  text-align: center;
+}
+
+.pro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro div{
+  box-shadow: 0.5px 0.5px 2px 2px;
+  padding: 1rem;
+}
+
+.deposit{
+  padding: 5px 2rem;
+  min-height: 100vh;
+}
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-gap: 1rem;
+  padding: 1px 2rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.package{
+  box-shadow: 0.5px 0.5px 2px 2px;
+}
+
+.package h5 {
+  background-color: black;
+  color: white;
+  height: 2rem;
+}
+
+.package p{
+  font-size: large;
+}
+
+.package p:nth-child(even){
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.package p:nth-child(odd){
+  background-color: black;
+  color: white;
+  margin: 0px;
+}
+
+form{
+  width: 100%;
+}
+input{
+  width: 100%;
+}
+
+.withdraw{
+  min-height: 100vh;
+}
+
+.msg{
+  text-align: center;
+}
+
+.pm{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-gap: 1rem;
+}
+
+.pmi{
+  text-align: center;
+}
+
+.b{
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bolder;
+}
