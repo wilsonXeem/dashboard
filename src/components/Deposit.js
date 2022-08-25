@@ -28,17 +28,23 @@ export default function Deposit() {
           <div className="package">
             <h5>Bronze</h5>
             <p>$1000-$9,999</p>
-            <p>15% monthly rate</p>
+            <p>
+              10% Biweekly ROI <br /> 10% Referral commission
+            </p>
           </div>
           <div className="package">
             <h5>Silver</h5>
             <p>$10,000-$24,999</p>
-            <p>20% monthly rate</p>
+            <p>
+              15% Biweekly ROI <br /> 10% Referral commission
+            </p>
           </div>
           <div className="package">
             <h5>Gold</h5>
             <p>$25,000-above</p>
-            <p>30% monthly rate</p>
+            <p>
+              20% Biweekly ROI <br /> 10% Referral commission
+            </p>
           </div>
         </div>
         <div>

@@ -1,10 +1,7 @@
+import { ArrowForwardRounded } from "@mui/icons-material";
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  ForexCrossRates,
-  MarketOverview,
-  StockMarket,
-} from "react-ts-tradingview-widgets";
+
 import { ValueContext } from "../Context";
 
 export default function Dashboard() {
@@ -25,26 +22,60 @@ export default function Dashboard() {
       >
         Dashboard
       </h3>
-      <div className="mkt">
-        <h4>Market Fundamental Overview</h4>
-        <MarketOverview
-          colorTheme="light"
-          height={500}
-          width="100%"
-          showFloatingTooltip
-        ></MarketOverview>
-      </div>
-      <div className="fcr">
-        <h4>Forex Market Fundamental Data</h4>
-        <ForexCrossRates
-          colorTheme="light"
-          height={500}
-          width="100%"
-        ></ForexCrossRates>
-      </div>
-      <div className="fcr">
-        <h4>Stock Market Fundamental Data</h4>
-        <StockMarket colorTheme="light" height={450} width="100%" />
+      <div className="dashes">
+        <div style={{ backgroundColor: "darkblue" }}>
+          <h3>Beginner</h3>
+          <h5>Investment Plan</h5>
+        </div>
+        <div style={{ backgroundColor: "darkOrange" }}>
+          <h2>$10,000.00</h2>
+          <h5>Account Balance</h5>
+          <p>
+            <ArrowForwardRounded />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkgreen" }}>
+          <h2>$10,000.00</h2>
+          <h5>Total Deposit</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkgreen" }}>
+          <h2>$10,000.00</h2>
+          <h5>Promo Deposit</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkgreen" }}>
+          <h2>$10,000.00</h2>
+          <h5>Total Profit</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkgreen" }}>
+          <h2>$10,000.00</h2>
+          <h5>Promo Earning</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkgreen" }}>
+          <h2>$10,000.00</h2>
+          <h5>Total Referral Commission</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
+        <div style={{ backgroundColor: "darkred" }}>
+          <h2>$10,000.00</h2>
+          <h5>Total Withdrawal</h5>
+          <p>
+            Transaction details <ArrowForwardRounded fontSize="15" />
+          </p>
+        </div>
       </div>
     </div>
   );

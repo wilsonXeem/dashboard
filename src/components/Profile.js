@@ -15,7 +15,7 @@ export default function Profile() {
       </h3>
       <div className="img">
         <FaUserCircle size={100} />
-        <h3>Wilson zimthamaha</h3>
+        <h3>Wilson Zimthamaha</h3>
       </div>
       <br />
       <div className="pro">

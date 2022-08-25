@@ -26,17 +26,31 @@ a{
 }
 
 .dash {
-  /* padding: 2px 1rem; */
-  background-color: rgb(232, 251, 251);
+  padding: 2px 1rem;
 }
 
-.dash div {
+.dashes div {
   background-color: white;
+  text-align: center;
+  /* border: solid black 1px; */
+  color: white;
+  box-shadow: 1px 1px 1px 1px;
 }
 
-.dash h4 {
-  padding: 5px 1rem;
-  border-bottom: solid blue 2px;
+.dashes p{
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0px;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1rem;
 }
 
 /* .ec{
@@ -58,11 +72,11 @@ a{
   text-align: center;
 }
 
-.pro {
+/* .pro {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .pro div{
   box-shadow: 0.5px 0.5px 2px 2px;
@@ -89,8 +103,13 @@ a{
 
 .package h5 {
   background-color: black;
+  font-size: larger;
   color: white;
   height: 2rem;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .package p{
