@@ -29,22 +29,35 @@ export default function Deposit() {
             <h5>Bronze</h5>
             <p>$1000-$9,999</p>
             <p>
-              10% Biweekly ROI <br /> 10% Referral commission
+              10% Weekly ROI <br /> 10% Referral commission
             </p>
           </div>
           <div className="package">
             <h5>Silver</h5>
             <p>$10,000-$24,999</p>
             <p>
-              15% Biweekly ROI <br /> 10% Referral commission
+              15% Weekly ROI <br /> 10% Referral commission
             </p>
           </div>
           <div className="package">
             <h5>Gold</h5>
             <p>$25,000-above</p>
             <p>
-              20% Biweekly ROI <br /> 10% Referral commission
+              20% Weekly ROI <br /> 10% Referral commission
             </p>
+          </div>
+        </div>
+        <br />
+        <h4>Compounding mode:</h4>
+        <div className="packages">
+          <div className="package">
+            <p>2 MONTHS</p>
+          </div>
+          <div className="package">
+            <p>4 MONTHS</p>
+          </div>
+          <div className="package">
+            <p>6 MONTHS</p>
           </div>
         </div>
         <div>
@@ -53,7 +66,7 @@ export default function Deposit() {
           <h4>Payment can be made through:</h4>
           <div className="pm">
             <div className="pmi">
-              <FaBitcoin size={100} />
+              <FaBitcoin size={100} className="g" />
               <h4>BITCOIN</h4>
               <div style={{ display: "flex" }}>
                 <form>
@@ -74,7 +87,7 @@ export default function Deposit() {
               </div>
             </div>
             <div className="pmi">
-              <FaEthereum size={100} />
+              <FaEthereum size={100} className="g" />
               <h4>ETHEREUM</h4>
               <div style={{ display: "flex" }}>
                 <form>
@@ -95,7 +108,7 @@ export default function Deposit() {
               </div>
             </div>
             <div className="pmi">
-              <FaDollarSign size={100} />
+              <FaDollarSign size={100} className="g" />
               <h4>USDT</h4>
               <div style={{ display: "flex" }}>
                 <form>
@@ -118,7 +131,8 @@ export default function Deposit() {
           </div>
           <br />
           <i style={{ color: "red" }}>
-            Contact our agent after payment for funding to reflect.
+            Contact our agent with proof of payment so that it reflects in your
+            dashboard.
           </i>
         </div>
       </div>

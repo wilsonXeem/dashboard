@@ -4,15 +4,27 @@ export const ValueContext = createContext();
 
 export default class Context extends Component {
   state = {
-    id: "",
+    signin: false,
+    user: {},
   };
 
-  setId = (id) => {
-    this.setState({ id: id });
+  setSignIn = () => {
+    this.setState({ signin: !this.state.signin });
   };
+
+  setUser = (user) => {
+    this.setState({ user: user });
+  };
+
   render() {
     return (
-      <ValueContext.Provider value={{ ...this.state, setId: this.setId }}>
+      <ValueContext.Provider
+        value={{
+          ...this.state,
+          setSignIn: this.setSignIn,
+          setUser: this.setUser,
+        }}
+      >
         {this.props.children}
       </ValueContext.Provider>
     );

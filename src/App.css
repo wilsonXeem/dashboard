@@ -6,7 +6,15 @@
   width: 100vw;
 }
 
-a{
+.sign {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
   text-decoration: none;
   color: black;
 }
@@ -22,7 +30,7 @@ a{
 
 .fcr {
   box-shadow: 0.5px 0.5px 5px 0.5px;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 .dash {
@@ -37,7 +45,7 @@ a{
   box-shadow: 1px 1px 1px 1px;
 }
 
-.dashes p{
+.dashes p {
   font-weight: bold;
   background: rgba(0, 0, 0, 0.5);
   margin: 0px;
@@ -45,9 +53,10 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
-.dashes{
+.dashes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1rem;
@@ -78,12 +87,12 @@ a{
   justify-content: center;
 } */
 
-.pro div{
+.pro div {
   box-shadow: 0.5px 0.5px 2px 2px;
   padding: 1rem;
 }
 
-.deposit{
+.deposit {
   padding: 5px 2rem;
   min-height: 100vh;
 }
@@ -97,7 +106,7 @@ a{
   font-weight: bolder;
 }
 
-.package{
+.package {
   box-shadow: 0.5px 0.5px 2px 2px;
 }
 
@@ -112,51 +121,71 @@ a{
   justify-content: center;
 }
 
-.package p{
+.package p {
   font-size: large;
 }
 
-.package p:nth-child(even){
+.package p:nth-child(even) {
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.package p:nth-child(odd){
+.package p:nth-child(odd) {
   background-color: black;
   color: white;
   margin: 0px;
 }
 
-form{
+form {
   width: 100%;
 }
-input{
+.input {
   width: 100%;
 }
 
-.withdraw{
+.withdraw {
   min-height: 100vh;
 }
 
-.msg{
+.msg {
   text-align: center;
 }
 
-.pm{
+.pm {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-gap: 1rem;
 }
 
-.pmi{
+.pmi {
   text-align: center;
 }
 
-.b{
+.b {
   background-color: black;
   color: white;
   border: none;
   font-weight: bolder;
+}
+
+.spinner {
+   width: 88px;
+   height: 88px;
+   animation: spinner 1s infinite linear;
+}
+
+.g{
+  animation: spinner-zp9dbg 2s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes spinner {
+    0% { transform: rotateX(360deg); }
+    100% { transform: rotateX(0deg); }
 }

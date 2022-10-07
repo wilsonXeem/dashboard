@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
@@ -16,10 +16,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
-// import MailIcon from "@mui/icons-material/Mail";
 import Logo from "./logo.png";
-// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FaUserCircle } from "react-icons/fa";
 import { TickerTape } from "react-ts-tradingview-widgets";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -29,6 +26,8 @@ import EventNoteIcon from "@mui/icons-material/EventNote";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import { Link } from "react-router-dom";
+import { Logout } from "@mui/icons-material";
+
 import { ValueContext } from "../Context";
 
 const drawerWidth = 240;
@@ -99,9 +98,9 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function SideBar() {
+  const { setSignIn } = useContext(ValueContext);
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const { id } = React.useContext(ValueContext);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -128,7 +127,7 @@ export default function SideBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography style={{width:"100%", height:"100%"}}>
+          <Typography style={{ width: "100%", height: "100%" }}>
             <TickerTape showSymbolLogo={false} />
           </Typography>
         </Toolbar>
@@ -176,7 +175,7 @@ export default function SideBar() {
         </List>
         <Divider />
         <List>
-          <Link to={`/${id}`}>
+          <Link to={`/`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -201,7 +200,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/profile`}>
+          <Link to={`/profile`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -226,7 +225,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/deposit`}>
+          <Link to={`/deposit`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -251,7 +250,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/withdraw`}>
+          <Link to={`/withdraw`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -276,7 +275,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/economic-calendar`}>
+          <Link to={`/economic-calendar`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -301,7 +300,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/technical-analysis`}>
+          <Link to={`/technical-analysis`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -326,7 +325,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to={`/${id}/tools`}>
+          <Link to={`/tools`}>
             <ListItem disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -346,6 +345,31 @@ export default function SideBar() {
                 </ListItemIcon>
                 <ListItemText
                   primary={"Tools"}
+                  sx={{ opacity: open ? 1 : 0 }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Link to={`#`} onClick={() => setSignIn()}>
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? "initial" : "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Logout />
+                </ListItemIcon>
+                <ListItemText
+                  primary={"Logout"}
                   sx={{ opacity: open ? 1 : 0 }}
                 />
               </ListItemButton>
